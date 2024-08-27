@@ -14,19 +14,19 @@ kill_bar() {
 if [[ "$1" == "--main" ]]; then
 	kill_bar
 	#apps (main)
-	polybar -q primary -c $DIR/main.ini &
-	polybar -q secondary -c $DIR/main.ini &
-	polybar -q primary2 -c $DIR/main.ini &
-	polybar -q secondary2 -c $DIR/main.ini &
+	polybar -q apps-base-1 -c $DIR/main.ini &
+	polybar -q apps-base-2 -c $DIR/main.ini &
+	polybar -q apps-text-1 -c $DIR/main.ini &
+	polybar -q apps-text-2 -c $DIR/main.ini &
 	# polybar -q top -c $DIR/main.ini &
 	# Workspace
-	polybar -q primary -c $DIR/workspace.ini &
-	polybar -q primary_2 -c $DIR/workspace.ini &
-	polybar -q secondary -c $DIR/workspace.ini &i
-	polybar -q secondary_2 -c $DIR/workspace.ini &i
+	polybar -q workspace-base-1 -c $DIR/main.ini &
+	polybar -q workspace-base-2 -c $DIR/main.ini &
+	polybar -q workspace-text-1 -c $DIR/main.ini &
+	polybar -q workspace-text-2 -c $DIR/main.ini &
 	# System 
-	polybar -q primary -c $DIR/system.ini &
-	polybar -q primary2 -c $DIR/system.ini &
+	polybar -q system-base-1 -c $DIR/main.ini &
+	polybar -q system-base-2 -c $DIR/main.ini &
 	#polybar -q secondary -c $DIR/system.ini &
 	#mpd
 	#polybar -q primary -c $DIR/mpd.ini &

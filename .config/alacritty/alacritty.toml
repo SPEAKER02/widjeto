@@ -27,11 +27,11 @@
   [colors.selection]
     background = '#cbe1e7'
     text = '#1e1c31'
-  [window]	
+[window]	
 
 	padding = { x = 15, y = 15 }
 
-	opacity = 0.99
+	opacity = 1 
 
 	blur = false
 
@@ -39,3 +39,6 @@
 
 	normal = { family = "Agave Nerd Font", style = "Regular" }
 	size = 10.00
+
+[terminal]
+  osc52= "CopyPaste"  
