@@ -38,7 +38,7 @@
 [font]	
 
 	normal = { family = "Agave Nerd Font", style = "Regular" }
-	size = 10.00
+	size = 9.00
 
 [terminal]
   osc52= "CopyPaste"  
