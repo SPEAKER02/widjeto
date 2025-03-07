@@ -35,5 +35,5 @@ return {
   		},
   	},
   },
-  ["plugins.godot"] = require("plugins.godot"),
+ -- ["plugins.godot"] = require("plugins.godot"),
 }

@@ -1,0 +1,6 @@
+#!/bin/sh
+
+xrandr --auto --output HDMI1 --mode 1920x1080 --right-of eDP1
+#xrandr --auto --output HDMI1 --mode 1920x1080 --right-of eDP1
+
+#/usr/lib/xfce-polkit/xfce-polkit

@@ -5,3 +5,6 @@ setxkbmap -option 'grp:alt_shift_toggle'
 
 flameshot &
 nm-applet --indicator &
+xinput --set-prop "Kingston HyperX Pulsefire Core" "libinput Accel Speed Default" -0.785
+xinput --set-prop "Kingston HyperX Pulsefire Core" "libinput Accel Speed" -0.785
+#ags &

@@ -10,7 +10,7 @@
 
 configuration {
 	/*---------- General setting ----------*/
-	modi: "drun,run,filebrowser,window";
+	modi: "drun,run,wifi:iwdrofimenu,window";
 	case-sensitive: false;
 	cycle: true;
 	filter: "";
@@ -18,9 +18,13 @@ configuration {
 	normalize-match: true;
 	show-icons: true;
 	icon-theme: "Papirus";
+	hover-select: true;
 /*	cache-dir: ;*/
 	steal-focus: false;
 /*	dpi: -1;*/
+	me-select-entry: "";
+	me-accept-entry: "MousePrimary";
+	me-cancel: "MouseSecondary";
 
 	/*---------- Matching setting ----------*/
 	matching: "normal";
@@ -142,7 +146,7 @@ configuration {
 	kb-ellipsize: "Alt+period";
 	kb-toggle-case-sensitivity: "grave,dead_grave";
 	kb-toggle-sort: "Alt+grave";
-	kb-cancel: "Escape,Control+g,Control+bracketleft";
+	kb-cancel: "Escape,Control+g,Control+bracketleft",MouseSecondary;"
 	kb-custom-1: "Alt+1";
 	kb-custom-2: "Alt+2";
 	kb-custom-3: "Alt+3";
@@ -177,7 +181,10 @@ configuration {
 	ml-row-up: "ScrollUp";
 	ml-row-down: "ScrollDown";
 	me-select-entry: "MousePrimary";
+	me-select-entry: "MousePrimary";
 	me-accept-entry: "MouseDPrimary";
 	me-accept-custom: "Control+MouseDPrimary";
 */
+	
+
 }

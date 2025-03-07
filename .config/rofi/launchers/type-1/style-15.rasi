@@ -25,7 +25,8 @@ configuration {
 
 * {
     border-colour:               var(selected);
-    handle-colour:               var(selected);
+    /*handle-colour:               var(selected);*/
+    handle-colour:               #A3BE8C;
     background-colour:           #1E2127E0;
     foreground-colour:           var(foreground);
     alternate-background:        var(background-alt);
@@ -33,13 +34,16 @@ configuration {
     normal-foreground:           var(foreground);
     urgent-background:           var(urgent);
     urgent-foreground:           var(background);
-    active-background:           var(active);
+    /*active-background:           var(active);*/
+    active-background:           #A3BE8C;
     active-foreground:           var(background);
-    selected-normal-background:  var(selected);
+    selected-normal-background:  #A3BE8C;
+    /*selected-normal-background:  var(selected);*/
     selected-normal-foreground:  var(background);
     selected-urgent-background:  var(active);
     selected-urgent-foreground:  var(background);
-    selected-active-background:  var(urgent);
+    /*selected-active-background:  var(urgent);*/
+    selected-active-background:  #A3BE8C;
     selected-active-foreground:  var(background);
     alternate-normal-background: var(background);
     alternate-normal-foreground: var(foreground);
@@ -117,7 +121,9 @@ mainbox {
 custombox {
     spacing:                     @box-spacing;
     background-color:            @background-colour;
+    padding:                     15px;
     text-color:                  @foreground-colour;
+    border-radius:               15px;
     orientation:                 horizontal;
     children:                    [ "mode-switcher", "listview" ];
 }

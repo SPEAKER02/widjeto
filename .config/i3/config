@@ -23,6 +23,7 @@ font pango:Nimbus Mono PS Bold 14px
 # https://wiki.archlinux.org/index.php/XDG_Autostart
 exec --no-startup-id dex --autostart --environment i3
 exec --no-startup-id nm-applet
+exec --no-startup-id firefox
 
 # The combination of xss-lock, nm-applet and pactl is a popular choice, so
 # they are included here as an example. Modify as you see fit.
@@ -61,13 +62,20 @@ for_window [class="Viewnior"] floating enable
 for_window [class="pavucontrol"] floating enable
 for_window [class="Nm-connection-editor"] floating enable
 for_window [instance="Godot_Engine"] floating enable
+for_window [instance="steam"] floating enable
+for_window [instance="peazip"] floating enable
 # for_window [class="feh"] floating enable
 
 # Use pactl to adjust volume in PulseAudio.
 set $refresh_i3status killall -SIGUSR1 i3status
-bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ +10% && $refresh_i3status
-bindsym XF86AudioLowerVolume exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ -10% && $refresh_i3status
-bindsym XF86AudioMute exec --no-startup-id pactl set-sink-mute @DEFAULT_SINK@ toggle && $refresh_i3status
+#bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ +1% && $refresh_i3status
+#bindsym XF86AudioLowerVolume exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ -1% && $refresh_i3status
+#bindsym XF86AudioMute exec --no-startup-id pactl set-sink-mute @DEFAULT_SINK@ toggle && $refresh_i3status
+
+bindsym XF86AudioRaiseVolume exec i3-volume -N volnoti -n -P up 1 
+bindsym XF86AudioLowerVolume exec i3-volume -N volnoti -n -P down 1 
+bindsym XF86AudioMute exec i3-volume -N volnoti -n mute 
+
 bindsym XF86AudioMicMute exec --no-startup-id pactl set-source-mute @DEFAULT_SOURCE@ toggle && $refresh_i3status
 
 # Use Mouse+$mod to drag floating windows to their wanted position
@@ -85,14 +93,13 @@ bindsym $mod+q kill
 
 # start dmenu (a program launcher)
 # bindsym $mod+d exec --no-startup-id dmenu_run
-bindsym $mod+d exec --no-startup-id ~/.config/polybar/pwidgets/scripts/launcher.sh 
+bindsym $mod+d exec --no-startup-id rofi -show drun 
 
-bindsym $mod+Tab exec --no-startup-id ~/.config/rofi/launchers/type-6/launcherW.sh
+bindsym $mod+Tab exec --no-startup-id rofi -show window & 
 
-bindsym $mod+p exec --no-startup-id ~/.config/polybar/pwidgets/scripts/powermenu.sh &
+bindsym $mod+p exec --no-startup-id $HOME/.local/bin/launch_powermenu.sh &
 
-bindsym Print exec --no-startup-id ~/.config/rofi/applets/bin/screenshot.sh
-
+bindsym Print exec flameshot gui --clipboard --pin --path ~/Pictures &
 bindsym $mod+o exec --no-startup-id rofi-volume &
 
 bindsym $mod+Shift+p exec --no-startup-id picom &
@@ -152,6 +159,11 @@ bindsym $mod+space focus mode_toggle
 # focus the parent container
 bindsym $mod+l focus parent
 
+
+# Playerctl container
+bindsym XF86AudioPlay exec playerctl play-pause
+bindsym XF86AudioNext exec playerctl next
+bindsym XF86AudioPrev exec playerctl previous
 
 # focus the child container
 #bindsym $mod+d focus child
@@ -241,6 +253,8 @@ gaps bottom 105
 # finds out, if available)
 
 exec_always bash ~/.config/polybar/launch.sh --pwidgets  &
+exec_always --no-startup-id /usr/bin/volnoti &
+exec_always xclickroot -r ~/.local/bin/xmenu_script.sh & 
 
 # Colors for borders
 client.focused		#1e1c31 #906cff #1e1c31 #906cff 

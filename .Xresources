@@ -1,0 +1,31 @@
+! Font
+!XMenu.faceName:                 DejaVu Sans,Noto Sans CJK JP
+XMenu.faceName:					Agave Nerd Font,Regular 
+XMenu.faceSize:					15
+
+! Windows 98 colors and border size
+XMenu.background:               #3B4252
+XMenu.foreground:               #E5E9F0
+XMenu.activeBackground:         #A3BE8C
+XMenu.activeForeground:         #3B4252
+XMenu.separatorColor:           #808080
+XMenu.borderColor:              #E5E9F0
+XMenu.borderWidth:              0
+
+! 3D/Motif-like relief
+XMenu.shadowThickness:          0
+XMenu.topShadowColor:           #A3BE8C
+XMenu.bottomShadowColor:        #808080
+XMenu.middleShadowColor:        #3B4252
+
+! Menu alignment
+XMenu.alignment:                left
+
+! Enable torn off menus
+XMenu.tearOff:                  Off
+
+! Transparency
+XMenu.opacity:                  1.0
+
+! Useless gaps, in pixels
+XMenu.gap:                      5

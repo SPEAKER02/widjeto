@@ -20,10 +20,10 @@ if [[ "$1" == "--main" ]]; then
 	polybar -q apps-base-2 -c $DIR/main.ini &
 	# polybar -q top -c $DIR/main.ini &
 	# Workspace
-	polybar -q workspace-text-1 -c $DIR/main.ini &
+	polybar -q workspace-base-2 -c $DIR/main.ini &
 	polybar -q workspace-text-2 -c $DIR/main.ini &
 	polybar -q workspace-base-1 -c $DIR/main.ini &
-	polybar -q workspace-base-2 -c $DIR/main.ini &
+	polybar -q workspace-text-1 -c $DIR/main.ini &
 	# System 
 	polybar -q system-base-1 -c $DIR/main.ini &
 	polybar -q system-base-2 -c $DIR/main.ini &
