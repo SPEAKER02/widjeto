@@ -27,6 +27,12 @@ neofetch
 ```
 
 pacman:
-```sudo pacman -S i3 rofi picom polybar dunst alacritty thunar zsh neofetch pavucontrol nm-applet nm-connection-editor```
+```
+sudo pacman -S i3 rofi picom polybar dunst \
+ alacritty thunar zsh neofetch \
+ pavucontrol nm-applet nm-connection-editor
+```
 yay:
-```yay -S xmenu xclickroot i3-volume volnoti```
+```
+yay -S xmenu xclickroot i3-volume volnoti
+```
