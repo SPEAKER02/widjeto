@@ -24,6 +24,9 @@ dunst
 zsh
 pavucontrol
 neofetch
+
+nvim
+nerd-fonts-git
 ```
 
 pacman:
@@ -34,5 +37,5 @@ sudo pacman -S i3 rofi picom polybar dunst \
 ```
 yay:
 ```
-yay -S xmenu xclickroot i3-volume volnoti
+yay -S xmenu xclickroot i3-volume volnoti nerd-fonts-git
 ```
